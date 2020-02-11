@@ -1,3 +1,17 @@
+# Secrets Shhhh
+secrets.txt
+.DS_Store
+
+# NodeJS
+node_modules
+
+# Code Editor Stuff
+.pio
+.vscode
+.clang_complete
+.gcc-flags.json
+.travis.yml
+
 # Prerequisites
 *.d
 

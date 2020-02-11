@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>pet</title>
+  </head>
+  <body>
+    <span>Feed your pet:</span>
+    <button class="choice">Carrot</button>
+    <button class="choice">Cake</button>
+    <div class="result"></div>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+
+      $(".choice").click(function() {
+
+        $.get( "feed", { choice: $(this).text() } ).done(function( data ) {
+
+          $( ".result" ).html( data );
+
+        });
+
+      })
+
+    });
+    </script>
+  </body>
+</html>

@@ -103,6 +103,5 @@ void loop()
     }
     http.end();
   }
-  display_hungry_pet();
   delay(500);
 }

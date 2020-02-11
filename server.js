@@ -5,6 +5,8 @@ var foodBasket = []
 
 app.use(express.static('public'))
 
+console.log("Go to http://localhost:8080/ in your browser and click the carrot button.");
+
 app.get('/feed', function (request, response) {
   //var clientIp = request.headers["X-Forwarded-For"] || request.connection.remoteAddress;
   //console.log(clientIp);

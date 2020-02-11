@@ -28,7 +28,9 @@ pio run --target upload
 node server.js
 ```
 
-If the device is connected to the server correctly, it should start animating sad faces. If it's not, it will just perpetually be happy.
+If the device is connected to the server correctly, it should start animating sad faces.
+
+If it's not, it will just perpetually be happy.
 
 Go to http://localhost:8080/ in your browser and click the carrot button.
 

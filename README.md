@@ -5,8 +5,7 @@ I used this project to learn C and about ESP8266 programming.
 ## Quick Start
 
 ### Prerequisites
-
-[Setup hardware from here](https://github.com/Qrome/marquee-scroller)
+[Setup hardware from here](https://www.thingiverse.com/thing:2867294)
 
 #### Software
 
@@ -14,7 +13,7 @@ I used this project to learn C and about ESP8266 programming.
 - [node](https://nodejs.org/en/download/)
 - [platformio](https://docs.platformio.org/en/stable/installation.html)
 
-#### Commands
+### Commands
 
 `git clone https://github.com/HappyViki/esp8266-led-pet.git`
 
@@ -36,4 +35,10 @@ Go to http://localhost:8080/ in your browser and click the carrot button.
 
 You should see an eating animation on the device.
 
-_Credits and helpful links coming soon._
+## Helpful Links
+
+- [C Essential Training: 1 The Basics](https://www.lynda.com/C-tutorials/C-Essential-Training-1-Basics/772324-2.html) (Free with some library cards)
+- [Original code that got me to make this](https://github.com/Qrome/marquee-scroller)
+- [PlatformIO baud rate](https://docs.platformio.org/en/latest/projectconf/section_env_monitor.html#monitor-speed)
+- [Connect ESP8266 to server](https://arduino-esp8266.readthedocs.io/en/latest/esp8266wifi/client-examples.html)
+- [Guide to PROGMEM on ESP8266 and Arduino IDE](https://arduino-esp8266.readthedocs.io/en/latest/PROGMEM.html)

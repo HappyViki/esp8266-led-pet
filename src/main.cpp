@@ -13,6 +13,9 @@
 // Put your NodeJS server IP address here
 IPAddress server(0,0,0,0);
 
+#define WIFI_NAME "********"
+#define WIFI_PASS "********"
+
 // Initialize the client library
 WiFiClient client;
 HTTPClient http;
@@ -25,6 +28,36 @@ HTTPClient http;
 
 //this is how many bytes of EEPROM are reserved for storing settings data (Number of bytes per item stored * number of items being stored +2 bytes for ):
 #define NUM_EEPROM_BYTES (EEPROM_BYTE_OFFSET * 6U)
+
+//this timeout is for initial connections to the wifi. It will only try for this many ms.
+#define WIFI_TIMEOUT 10000UL
+
+//this tracks the last wifi connection time for reconnect attempts:
+uint32_t last_wifi_connection_attempt = 0;
+
+bool connect_to_wifi(void)
+{
+  uint32_t wifi_connection_timeout = millis();
+  last_wifi_connection_attempt = millis();
+
+  WiFi.begin(WIFI_NAME, WIFI_PASS);
+
+  Serial.print("Connecting");
+  while (WiFi.status() != WL_CONNECTED){
+    delay(500);
+    Serial.print(".");
+    if(millis() >= wifi_connection_timeout + WIFI_TIMEOUT){
+      Serial.println();
+      Serial.println("Unable to connect.");
+      return false;
+    }
+  }
+  Serial.println();
+
+  Serial.print("Connected, IP address: ");
+  Serial.println(WiFi.localIP());
+  return true;
+}
 
 const uint8_t face[] PROGMEM = {5,
 B01010, B01010, B00000, B10001, B11111, // :)
@@ -83,11 +116,12 @@ void setup()
 
   //print an init message to the display:
   display_face(0);
+
+  connect_to_wifi();
 }
 
 void loop()
 {
-
   if (client.connect(server, 8080)) {
     http.begin(client,"http://localhost:8080/feed");
     int statusCode = http.GET();
@@ -102,6 +136,10 @@ void loop()
       display_hungry_pet();
     }
     http.end();
+  }
+  else
+  {
+    display_face(0);
   }
   delay(500);
 }

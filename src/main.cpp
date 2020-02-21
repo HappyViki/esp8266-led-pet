@@ -10,7 +10,8 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
 
-// Don't forget to config
+// 1) Config secrets-config.h with wifi user/pass and your network ip,
+// 2) Rename secrets-config.h -> secrets.h
 #include <secrets.h>
 
 IPAddress server(IP);

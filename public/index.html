@@ -18,7 +18,7 @@
 
       $(".choice").click(function() {
 
-        $.get( "feed", { choice: $(this).text() } ).done(function( data ) {
+        $.get( "put_food_into_basket", { choice: $(this).text() } ).done(function( data ) {
 
           $( ".result" ).html( data );
 

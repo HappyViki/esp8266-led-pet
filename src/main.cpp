@@ -123,11 +123,11 @@ void setup()
 void loop()
 {
   if (client.connect(server, 8080)) {
-    http.begin(client,"http://localhost:8080/feed");
+    http.begin(client,"http://localhost:8080/feed_pet_from_basket");
     int statusCode = http.GET();
     Serial.println(statusCode);
     Serial.println(http.getString());
-    if (http.getString() == "carrot")
+    if (http.getString() == "carrot" || http.getString() == "cake")
     {
       display_eating_pet();
     }

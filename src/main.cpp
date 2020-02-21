@@ -10,11 +10,10 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
 
-// Put your NodeJS server IP address here
-IPAddress server(0,0,0,0);
+// Don't forget to config
+#include <secrets.h>
 
-#define WIFI_NAME "********"
-#define WIFI_PASS "********"
+IPAddress server(IP);
 
 // Initialize the client library
 WiFiClient client;

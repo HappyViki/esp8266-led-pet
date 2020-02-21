@@ -2,6 +2,8 @@
 
 I used this project to learn C and about ESP8266 programming.
 
+[Watch video of it in action!](https://photos.app.goo.gl/nQjPjED9Z29yTqBX8)
+
 ## Quick Start
 
 ### Prerequisites

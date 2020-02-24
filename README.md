@@ -19,8 +19,9 @@ I used this project to learn C and about ESP8266 programming.
 
 `git clone https://github.com/HappyViki/esp8266-led-pet.git`
 
-- Go to /src/main.cpp and change `IPAddress server(0,0,0,0);` to where the NodeJS server is going to be publicly located.
-- Plug your device into the computer.
+- Config secrets-config.h with your wifi user/pass and server's network ip
+- Rename secrets-config.h -> secrets.h
+- Plug your device into the computer
 
 ```
 cd esp8266-led-pet

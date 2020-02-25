@@ -2,31 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>pet</title>
+    <title>ESP8266 LED Pet</title>
+    <script src="https://kit.fontawesome.com/82ae13a9ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <span>Feed your pet:</span>
-    <button class="choice">Carrot</button>
-    <button class="choice">Cake</button>
-    <div class="result"></div>
+  <body class="bg-green text-yellow" style="background-image: url('i-like-food.svg')">
+    <div class="container">
+      <div class="p-16 mt-16 lg:mx-40 bg-green">
+        <h1 class="text-2xl sm:text-6xl">ESP8266 LED Pet</h1>
+        <div class="buttons text-4xl bg-transparent  text-cream">
+          <button class="my-choice hover:text-yellow">
+            <i class="fas fa-carrot"></i> Carrot</button>
+          <button class="my-choice hover:text-yellow">
+            <i class="fa fa-birthday-cake"></i> Cake</button>
+        </div>
+        <div class="result"></div>
+      </div>
+    </div>
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    $( document ).ready(function() {
-
-      $(".choice").click(function() {
-
-        $.get( "put_food_into_basket", { choice: $(this).text() } ).done(function( data ) {
-
-          $( ".result" ).html( data );
-
-        });
-
-      })
-
-    });
-    </script>
+    <script src="script.js" charset="utf-8"></script>
   </body>
 </html>

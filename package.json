@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "style": "npx tailwindcss build ./tailwindcss_style.css -o ./public/style.css",
     "upload": "platformio run --target upload",
     "proto": "gcc prototype/pet.cpp -o prototype/pet && ./prototype/pet"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "tailwindcss": "^1.2.0"
   }
 }

@@ -1,5 +1,7 @@
 # ESP8266 LED Pet
 
+![ledpet](https://github.com/HappyViki/esp8266-led-pet/assets/14225943/1a36ec8c-48b1-4da3-a114-79493c463ac5)
+
 I used this project to learn C and about ESP8266 programming.
 
 [Watch video of it in action!](https://photos.app.goo.gl/nQjPjED9Z29yTqBX8)
